@@ -3,7 +3,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from random import sample
 import plotly.express as px
 from dateutil.relativedelta import *
 import seaborn as sns; sns.set_theme()
