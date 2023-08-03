@@ -8,15 +8,6 @@ from dateutil.relativedelta import *
 import plotly.graph_objects as go
 from PIL import Image
 
-# Modelado y Forecasting
-# ==============================================================================
-from fbprophet import Prophet
-
-# Configuración warnings
-# ==============================================================================
-import warnings
-warnings.filterwarnings('ignore')
-
 ### App de Servicios Activos
 
 def createPage():
