@@ -23,7 +23,7 @@ def createPage():
     @st.cache_data(show_spinner='Cargando Datos... Espere...', persist=True)
     def load_ppe():
     
-        rutaPPE = r'C:\Users\Elthon Daniel Rivas\OneDrive - ILSP GLOBAL SEGURIDAD PRIVADA SAPI DE C.V\Documentos\Areas de Trabajo\Inteligencia de Negocios\Datos\Data Hydrogen.xlsx'
+        rutaPPE = 'https://github.com/ElthonD/HydrogenAI27/tree/main/data/Data Hydrogen.xlsx'
         PPE = pd.read_excel(rutaPPE, sheet_name = "Data")
         PPE["Cliente"] = PPE["Cliente"].astype(str)
         PPE["Base Cliente"] = PPE["Base Cliente"].astype(str)
@@ -808,12 +808,12 @@ def createPage():
             #Modulo de Indicadores
             st.markdown("<h2 style='text-align: left;'>Indicadores de Pago por Evento</h2>", unsafe_allow_html=True)
 
-            pathLogo = pathLogo = r'C:\Users\Elthon Daniel Rivas\OneDrive - ILSP GLOBAL SEGURIDAD PRIVADA SAPI DE C.V\Documentos\Areas de Trabajo\Inteligencia de Negocios\Aplicaciones\App Dashboard Hydrogen\img\indicadoresppe1.png'
+            pathLogo = pathLogo = 'https://github.com/ElthonD/HydrogenAI27/blob/main/img/indicadoresppe1.png'
             display = Image.open(pathLogo)
             display = np.array(display)
             col1, col2, col3 = st.columns([1,5,1])
             col2.image(display, use_column_width=True)
-            pathLogo1 = r'C:\Users\Elthon Daniel Rivas\OneDrive - ILSP GLOBAL SEGURIDAD PRIVADA SAPI DE C.V\Documentos\Areas de Trabajo\Inteligencia de Negocios\Aplicaciones\App Dashboard Hydrogen\img\indicadoresppe2.png'
+            pathLogo1 = 'https://github.com/ElthonD/HydrogenAI27/blob/main/img/indicadoresppe2.png'
             display1 = Image.open(pathLogo1)
             display1 = np.array(display1)
             co1, co2, co3 = st.columns([1,5,1])
