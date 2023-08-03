@@ -5,7 +5,6 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 from dateutil.relativedelta import *
-import seaborn as sns; sns.set_theme()
 import plotly.graph_objects as go
 from PIL import Image
 
