@@ -8,7 +8,7 @@ from PIL import Image
 def createPage():
     
     # Title of the main page
-    pathLogo = pathLogo = 'https://github.com/ElthonD/HydrogenAI27/blob/main/img/Logo_Hydrogen.png'
+    pathLogo = 'https://github.com/ElthonD/HydrogenAI27/blob/main/img/Logo_Hydrogen.png'
     display = Image.open(pathLogo)
     display = np.array(display)
     # st.image(display, width = 400)
