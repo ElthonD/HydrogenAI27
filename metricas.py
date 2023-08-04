@@ -7,6 +7,7 @@ from random import sample
 from dateutil.relativedelta import *
 import plotly.graph_objects as go
 from PIL import Image
+import openpyxl
 
 ### App de Servicios Activos
 

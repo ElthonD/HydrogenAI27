@@ -7,6 +7,8 @@ import plotly.express as px
 from dateutil.relativedelta import *
 import plotly.graph_objects as go
 from PIL import Image
+import openpyxl
+
 
 # Configuración warnings
 # ==============================================================================
