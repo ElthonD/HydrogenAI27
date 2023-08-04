@@ -15,7 +15,7 @@ def createPage():
     @st.cache_data(show_spinner='Cargando Datos... Espere...', persist=True)
     def load_ppe():
     
-        rutaPPE = 'https://github.com/ElthonD/HydrogenAI27/tree/main/data/Data Hydrogen.xlsx'
+        rutaPPE = './data/Data Hydrogen.xlsx'
         PPE = pd.read_excel(rutaPPE, sheet_name = "Data")
         PPE["Cliente"] = PPE["Cliente"].astype(str)
         PPE["Base Cliente"] = PPE["Base Cliente"].astype(str)
@@ -381,7 +381,7 @@ def createPage():
             #Modulo de Indicadores
             st.markdown("<h2 style='text-align: left;'>Métricas de Pago por Evento</h2>", unsafe_allow_html=True)
 
-            pathLogo = pathLogo = 'https://github.com/ElthonD/HydrogenAI27/blob/main/img/metricas.png'
+            pathLogo = pathLogo = './img/metricas.png'
             display = Image.open(pathLogo)
             display = np.array(display)
             col11, col22, col33 = st.columns([1,5,1])
