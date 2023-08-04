@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import openpyxl
 import inicio, indicadores, metricas # Importar páginas acá
  #### Páginas
 
