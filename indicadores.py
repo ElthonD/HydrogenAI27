@@ -20,7 +20,7 @@ def createPage():
     @st.cache_data(show_spinner='Cargando Datos... Espere...', persist=True)
     def load_ppe():
     
-        rutaPPE = 'https://github.com/ElthonD/HydrogenAI27/tree/main/data/Data Hydrogen.xlsx'
+        rutaPPE = './data/Data Hydrogen.xlsx'
         PPE = pd.read_excel(rutaPPE, sheet_name = "Data")
         PPE["Cliente"] = PPE["Cliente"].astype(str)
         PPE["Base Cliente"] = PPE["Base Cliente"].astype(str)
