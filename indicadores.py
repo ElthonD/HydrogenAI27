@@ -805,12 +805,12 @@ def createPage():
             #Modulo de Indicadores
             st.markdown("<h2 style='text-align: left;'>Indicadores de Pago por Evento</h2>", unsafe_allow_html=True)
 
-            pathLogo = pathLogo = 'https://github.com/ElthonD/HydrogenAI27/blob/main/img/indicadoresppe1.png'
+            pathLogo = pathLogo = './img/indicadoresppe1.png'
             display = Image.open(pathLogo)
             display = np.array(display)
             col1, col2, col3 = st.columns([1,5,1])
             col2.image(display, use_column_width=True)
-            pathLogo1 = 'https://github.com/ElthonD/HydrogenAI27/blob/main/img/indicadoresppe2.png'
+            pathLogo1 = './img/indicadoresppe2.png'
             display1 = Image.open(pathLogo1)
             display1 = np.array(display1)
             co1, co2, co3 = st.columns([1,5,1])
