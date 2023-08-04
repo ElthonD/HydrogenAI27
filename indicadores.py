@@ -148,7 +148,9 @@ def createPage():
         pSer18 = pSer18.reset_index()
     
         # Preparar Dataframe Final
-        pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        pSer18['MesN'] = pSer18['Fecha Inicio'].apply(lambda x: x.month)
+        pSer18['Mes'] = pSer18['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
+        #pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
         pSer18['Año'] = pSer18['Fecha Inicio'].dt.year
         pSer18['Días de Trabajo'] = pSer18['Fecha Inicio'].dt.daysinmonth
         pSer18 = pSer18[['Fecha Inicio','Duración', 'Bitácora','Orden de Servicio','Plantilla Promedio','Dias Descanso','Ingresos','Mes','Año','Días de Trabajo', 'Foraneos', 'Locales', 'Repartos']]
@@ -266,7 +268,9 @@ def createPage():
         pSer18 = pSer18.reset_index()
     
         # Preparar Dataframe Final
-        pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        pSer18['MesN'] = pSer18['Fecha Inicio'].apply(lambda x: x.month)
+        pSer18['Mes'] = pSer18['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
+        #pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
         pSer18['Año'] = pSer18['Fecha Inicio'].dt.year
         pSer18['Días de Trabajo'] = pSer18['Fecha Inicio'].dt.daysinmonth
         pSer18 = pSer18[['Fecha Inicio','Duración', 'Bitácora','Orden de Servicio','Ingresos','Mes','Año','Días de Trabajo', 'Foraneos', 'Locales', 'Repartos']]
@@ -400,7 +404,9 @@ def createPage():
         pSer18 = pSer18.reset_index()
     
         # Preparar Dataframe Final
-        pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        pSer18['MesN'] = pSer18['Fecha Inicio'].apply(lambda x: x.month)
+        pSer18['Mes'] = pSer18['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
+        #pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
         pSer18['Año'] = pSer18['Fecha Inicio'].dt.year
         pSer18['Días del Mes'] = pSer18['Fecha Inicio'].dt.daysinmonth
         pSer18 = pSer18[['Fecha Inicio','Duración', 'Bitácora','Orden de Servicio','Plantilla Promedio','Dias Descanso','Ingresos','Mes','Año','Días del Mes', 'Foraneos', 'Locales', 'Repartos']]
@@ -432,7 +438,6 @@ def createPage():
         pSer19 = pSer19.astype(int)
     
         return pSer19    
-    
 
     def planeación_agregada_cliente(df):
 
@@ -524,7 +529,9 @@ def createPage():
         pSer18 = pSer18.reset_index()
     
         # Preparar Dataframe Final
-        pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        pSer18['MesN'] = pSer18['Fecha Inicio'].apply(lambda x: x.month)
+        pSer18['Mes'] = pSer18['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
+        #pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
         pSer18['Año'] = pSer18['Fecha Inicio'].dt.year
         pSer18['Días del Mes'] = pSer18['Fecha Inicio'].dt.daysinmonth
         pSer18 = pSer18[['Fecha Inicio','Duración', 'Bitácora','Orden de Servicio','Ingresos','Mes','Año','Días del Mes', 'Foraneos', 'Locales', 'Repartos']]
