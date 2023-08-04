@@ -84,7 +84,9 @@ def createPage():
         # Para Descansos Promedio
         pSer8 = df.copy()
         pSer8.drop(['Número de Folio','Orden de Servicio','Tipo Monitoreo', 'Tipo Servicio', 'Fecha Finalización', 'Duración Estimada', 'Distancia', 'Origen', 'TU1','EstadoOrigen','RegionOrigen', 'LAO','LOO','Destino','TU2','EstadoDestino','RegionDestino','LAD','LOD','CostoKM','Patrulla','Base Patrulla','Ubicación Patrulla','KM Rodaje','Costo KM Rodaje'], axis = 'columns', inplace=True)    
-        pSer8['Mes'] = pSer8['Fecha Inicio'].dt.month_name(locale='Spanish')
+        #pSer8['Mes'] = pSer8['Fecha Inicio'].dt.month_name(locale='Spanish')
+        pSer8['MesN'] = pSer8['Fecha Inicio'].apply(lambda x: x.month)
+        pSer8['Mes'] = pSer8['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         pSer8['MesN'] = pSer8['Fecha Inicio'].apply(lambda x: x.month)
         pSer8['Mes'] = pSer8['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         pSer8['Año'] = pSer8['Fecha Inicio'].dt.year
