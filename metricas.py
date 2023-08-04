@@ -143,7 +143,9 @@ def createPage():
         pSer18 = pSer18.reset_index()
     
         # Preparar Dataframe Final
-        pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        #pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        pSer18['MesN'] = pSer18['Fecha Inicio'].apply(lambda x: x.month)
+        pSer18['Mes'] = pSer18['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         pSer18['Año'] = pSer18['Fecha Inicio'].dt.year
         pSer18['Días de Trabajo'] = pSer18['Fecha Inicio'].dt.daysinmonth
         pSer18 = pSer18[['Fecha Inicio','Duración', 'Bitácora','Orden de Servicio','Plantilla Promedio','Dias Descanso','Ingresos','Mes','Año','Días de Trabajo', 'Foraneos', 'Locales', 'Repartos']]
@@ -258,7 +260,9 @@ def createPage():
         pSer18 = pSer18.reset_index()
     
         # Preparar Dataframe Final
-        pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        #pSer18['Mes'] = pSer18['Fecha Inicio'].dt.month_name(locale='Spanish')
+        pSer18['MesN'] = pSer18['Fecha Inicio'].apply(lambda x: x.month)
+        pSer18['Mes'] = pSer18['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         pSer18['Año'] = pSer18['Fecha Inicio'].dt.year
         pSer18['Días de Trabajo'] = pSer18['Fecha Inicio'].dt.daysinmonth
         pSer18 = pSer18[['Fecha Inicio','Duración', 'Bitácora','Orden de Servicio','Ingresos','Mes','Año','Días de Trabajo', 'Foraneos', 'Locales', 'Repartos']]
@@ -316,7 +320,9 @@ def createPage():
     
     def tasa_variacion_ppe_bases(df):
         
-        df['Mes'] = df['Fecha'].dt.month_name(locale='Spanish')
+        #df['Mes'] = df['Fecha'].dt.month_name(locale='Spanish')
+        df['MesN'] = df['Fecha Inicio'].apply(lambda x: x.month)
+        df['Mes'] = df['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         df['Año'] = df['Fecha'].dt.year
         df['Tasa Servicios Reales (%)'] = (df['Servicios Reales'].diff()/df['Servicios Reales'].shift())*100
         df['Tasa Servicios Realizados (%)'] = (df['Servicios Realizados'].diff()/df['Servicios Realizados'].shift())*100
@@ -346,7 +352,9 @@ def createPage():
 
     def tasa_variacion_ppe_clientes(df):
         
-        df['Mes'] = df['Fecha'].dt.month_name(locale='Spanish')
+        #df['Mes'] = df['Fecha'].dt.month_name(locale='Spanish')
+        df['MesN'] = df['Fecha Inicio'].apply(lambda x: x.month)
+        df['Mes'] = df['MesN'].map({1:"Enero", 2:"Febrero", 3:"Marzo", 4:"Abril", 5:"Mayo", 6:"Junio", 7:"Julio", 8:"Agosto", 9:"Septiembre", 10:"Octubre", 11:"Noviembre", 12:"Diciembre"})
         df['Año'] = df['Fecha'].dt.year
         df['Tasa Servicios Reales (%)'] = (df['Servicios Reales'].diff()/df['Servicios Reales'].shift())*100
         df['Tasa Servicios Realizados (%)'] = (df['Servicios Realizados'].diff()/df['Servicios Realizados'].shift())*100
