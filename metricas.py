@@ -8,7 +8,7 @@ from dateutil.relativedelta import *
 import plotly.graph_objects as go
 from PIL import Image
 import locale
-locale.setlocale(locale.LC_ALL, 'es_ES.utf8')
+locale.setlocale(locale.LC_ALL, 'es_ES.UTF8')
 
 ### App de Servicios Activos
 
