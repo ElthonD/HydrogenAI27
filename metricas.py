@@ -2494,7 +2494,7 @@ def createPage():
             #Modulo de Indicadores
             st.markdown("<h2 style='text-align: left;'>Métricas de Pago por Evento</h2>", unsafe_allow_html=True)
             
-            pathLogo = r'./data/metricas.png'
+            pathLogo = r'./img/metricas.png'
             display = Image.open(pathLogo)
             display = np.array(display)
             col11, col22, col33 = st.columns([1,5,1])
