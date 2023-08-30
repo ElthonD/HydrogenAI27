@@ -2541,6 +2541,15 @@ def createPage():
 
             data2 =  df_grafico_bases(data1)
 
+            def format_int_with_commas(x):
+                """
+                Formats an integer with commas as thousand separators.
+                """
+                return f"{x:,}"
+
+            data2['Ingresos'] = data2['Ingresos'].applymap(format_int_with_commas)
+            data2['Ingresos Per Cápita'] = data2['Ingresos Per Cápita'].applymap(format_int_with_commas)
+
             servicios_reales_inicial = data2['Servicios Reales'].values[0]
             servicios_reales_final = data2['Servicios Reales'].values[-1]
 
